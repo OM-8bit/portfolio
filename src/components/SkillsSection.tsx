@@ -10,10 +10,10 @@ interface Skill {
 const skills: Skill[] = [
   { name: 'Python', level: 9, delay: 0 },
   { name: 'Java', level: 8, delay: 200 },
-  { name: 'Streamlit', level: 8, delay: 400 },
-  { name: 'FastAPI', level: 9, delay: 600 },
-  { name: 'Flask', level: 9, delay: 800 },
-  { name: 'SupaBase', level: 9, delay: 1000 },
+  { name: 'FastAPI', level: 9, delay: 400 },
+  { name: 'Flask', level: 9, delay: 600 },
+  { name: 'SupaBase', level: 9, delay: 800 },
+  { name: 'Streamlit', level: 8, delay: 1000 },
   { name: 'Power BI', level: 7, delay: 1200 }
 ];
 
@@ -25,9 +25,9 @@ const SkillBar = ({ skill, isVisible }: { skill: Skill; isVisible: boolean }) =>
         <h4 className="font-medium text-slate-700">{skill.name}</h4>
         <span className="text-sm text-portfolio-blue">{skill.level}/10</span>
       </div>
-      <div className="skill-bar">
+      <div className="w-full bg-gray-200 rounded-full h-2.5">
         <div 
-          className="skill-progress" 
+          className="bg-portfolio-blue h-2.5 rounded-full" 
           style={{ 
             width: isVisible ? `${skill.level * 10}%` : '0%',
             transition: `width 1.5s ease-out ${skill.delay / 1000}s`

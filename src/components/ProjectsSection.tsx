@@ -18,7 +18,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "STOCK WIZARD",
-    description: "Created with Python, this tool efficiently screens stocks based on various parameters, helping users make informed investment decisions.",
+    description: "Created with Python, this tool efficiently screens stocks based on various parameters, helping users make informed investment decisions. User experience for listing, purchasing, and managing groceries.",
     technologies: ["Python", "Data Analysis", "Financial APIs"]
   },
   {
@@ -38,7 +38,7 @@ const projects: Project[] = [
 const ProjectCard = ({ project, index, isVisible }: { project: Project; index: number; isVisible: boolean }) => {
   return (
     <div 
-      className={`project-card bg-white p-6 transition-all duration-700 delay-${index * 200} 
+      className={`project-card bg-white p-6 rounded-xl shadow-md transition-all duration-700 delay-${index * 200} 
       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
     >
       <h3 className="text-xl font-bold mb-2 text-portfolio-accent">{project.title}</h3>

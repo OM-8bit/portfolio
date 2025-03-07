@@ -43,7 +43,7 @@ const AboutSection = () => {
             ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="rounded-2xl overflow-hidden shadow-lg bg-portfolio-blue/10 p-3 mb-6">
               <img 
-                src="/lovable-uploads/eee44f8b-8b53-4595-b646-7636af8ec34a.png" 
+                src="/lovable-uploads/a6dc58bc-901a-4566-aeff-080234764a0b.png" 
                 alt="Om Barot" 
                 className="w-full h-auto rounded-xl"
               />
@@ -91,8 +91,8 @@ const AboutSection = () => {
                   <li className="transition-all hover:translate-x-1 duration-300">
                     <p className="font-medium">B.TECH (COMPUTER SCIENCE)</p>
                     <p className="text-sm text-slate-600">2022-2026</p>
-                    <p className="text-sm text-slate-600">Specialization: Data Science</p>
-                    <p className="text-sm text-slate-600">CGPA: 9.0+</p>
+                    <p className="text-sm text-slate-600">Specialization: DATA SCIENCE</p>
+                    <p className="text-sm text-slate-600">[PASSED ALL THE SEMESTERS WITH ATLEAST 9 CGPA]</p>
                   </li>
                 </ul>
               </div>
@@ -101,20 +101,46 @@ const AboutSection = () => {
                 <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Skills</h4>
                 <div className="space-y-3">
                   <div>
-                    <p className="font-medium">Programming Languages</p>
-                    <p className="text-sm text-slate-600">Python, Java, JavaScript, TypeScript, C/C++</p>
+                    <p className="font-medium">Python</p>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '90%' }}></div>
+                    </div>
                   </div>
                   <div>
-                    <p className="font-medium">Web Development</p>
-                    <p className="text-sm text-slate-600">React, Next.js, Flask, Django, FastAPI</p>
+                    <p className="font-medium">Java</p>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '80%' }}></div>
+                    </div>
                   </div>
                   <div>
-                    <p className="font-medium">Database</p>
-                    <p className="text-sm text-slate-600">PostgreSQL, MySQL, MongoDB, Supabase</p>
+                    <p className="font-medium">FastAPI</p>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '90%' }}></div>
+                    </div>
                   </div>
                   <div>
-                    <p className="font-medium">Tools & Others</p>
-                    <p className="text-sm text-slate-600">Git, Docker, AWS, GCP, CI/CD</p>
+                    <p className="font-medium">Flask</p>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '90%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-medium">SupaBase</p>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '90%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-medium">Streamlit</p>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '80%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-medium">Power BI</p>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '70%' }}></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -126,30 +152,30 @@ const AboutSection = () => {
                 <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Projects</h4>
                 <ul className="space-y-4">
                   <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">SMART BIN</p>
+                    <p className="font-medium">1) SMART BIN :-</p>
                     <p className="text-sm text-slate-600">
                       Presented at a hackathon, this project is a smart waste management system 
                       built using Java and Flutter, designed to optimize waste collection and disposal.
                     </p>
                   </li>
                   <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">STOCK WIZARD – AN EFFICIENT STOCK SCREENER</p>
+                    <p className="font-medium">2) STOCK WIZARD – AN EFFICIENT STOCK SCREENER(CURRENTLY WORKING):-</p>
                     <p className="text-sm text-slate-600">
                       Created with Python, this tool efficiently screens stocks based on various parameters, 
-                      helping users make informed investment decisions.
+                      helping users make informed investment decisions. User experience for listing, purchasing, and managing groceries.
                     </p>
                   </li>
                   <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">WEATHER DATA VISUALIZATION</p>
+                    <p className="font-medium">3) WEATHER DATA VISUALIZATION :-</p>
                     <p className="text-sm text-slate-600">
                       Developed using Python and Streamlit, this app visualizes weather data, 
                       offering users interactive and insightful weather analytics.
                     </p>
                   </li>
                   <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">Gym Sphere - A Fullstack Gym Management Solutions</p>
+                    <p className="font-medium">4) Gym Sphere - A Fullstack Gym Management Solutions (currently working)</p>
                     <p className="text-sm text-slate-600">
-                      Currently in development. Developed with FastAPI, Supabase, HTML, CSS, JavaScript, PostgreSQL.
+                      Currently in development. Admin site is ready. Developed with FastAPI, Supabase, HTML, CSS, JavaScript, PostgreSQL.
                       It offers a generalized app for solving all the gym management problems.
                     </p>
                   </li>
@@ -173,27 +199,27 @@ const AboutSection = () => {
                     <li className="flex items-start">
                       <span className="font-medium mr-2">LinkedIn:</span>
                       <a href="https://www.linkedin.com/in/om-barot-232630338/" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
-                        om-barot-232630338
+                        www.linkedin.com/in/om-barot-232630338/
                       </a>
                     </li>
                     <li className="flex items-start">
                       <span className="font-medium mr-2">GitHub:</span>
                       <a href="https://github.com/OM-8bit" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
-                        OM-8bit
+                        github.com/OM-8bit
                       </a>
                     </li>
                   </ul>
                 </div>
                 
                 <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
-                  <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Interests & Hobbies</h4>
-                  <ul className="grid grid-cols-2 gap-2">
-                    <li className="bg-white p-2 rounded shadow-sm text-center text-slate-700">Exploring new places</li>
-                    <li className="bg-white p-2 rounded shadow-sm text-center text-slate-700">Workout</li>
-                    <li className="bg-white p-2 rounded shadow-sm text-center text-slate-700">Reading</li>
-                    <li className="bg-white p-2 rounded shadow-sm text-center text-slate-700">Problem Solving</li>
-                    <li className="bg-white p-2 rounded shadow-sm text-center text-slate-700">Open Source</li>
-                    <li className="bg-white p-2 rounded shadow-sm text-center text-slate-700">AI/ML</li>
+                  <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Hobbies</h4>
+                  <ul className="list-disc ml-5 space-y-2">
+                    <li className="text-slate-700">EXPLORING NEW PLACES</li>
+                    <li className="text-slate-700">WORKOUT</li>
+                    <li className="text-slate-700">Reading</li>
+                    <li className="text-slate-700">Problem Solving</li>
+                    <li className="text-slate-700">Open Source</li>
+                    <li className="text-slate-700">AI/ML</li>
                   </ul>
                 </div>
               </div>
