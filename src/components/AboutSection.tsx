@@ -43,7 +43,7 @@ const AboutSection = () => {
             ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="rounded-2xl overflow-hidden shadow-lg bg-portfolio-blue/10 p-3 mb-6">
               <img 
-                src="/lovable-uploads/35ebd811-ebfb-448b-b1e5-f3202caafdc5.png" 
+                src="/lovable-uploads/eee44f8b-8b53-4595-b646-7636af8ec34a.png" 
                 alt="Om Barot" 
                 className="w-full h-auto rounded-xl"
               />
@@ -52,7 +52,7 @@ const AboutSection = () => {
             <div className="text-center">
               <Button 
                 className="bg-portfolio-blue hover:bg-portfolio-accent transition-colors duration-300 flex items-center gap-2"
-                onClick={() => window.open("/path-to-your-resume.pdf", "_blank")}
+                onClick={() => window.open("/Om_Barot_Resume.pdf", "_blank")}
               >
                 <Download size={18} />
                 Download Resume
@@ -122,6 +122,40 @@ const AboutSection = () => {
             
             <div className={`mt-8 transition-all duration-700 delay-1000 
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="bg-slate-50 p-6 rounded-xl shadow-sm mb-8">
+                <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Projects</h4>
+                <ul className="space-y-4">
+                  <li className="transition-all hover:translate-x-1 duration-300">
+                    <p className="font-medium">SMART BIN</p>
+                    <p className="text-sm text-slate-600">
+                      Presented at a hackathon, this project is a smart waste management system 
+                      built using Java and Flutter, designed to optimize waste collection and disposal.
+                    </p>
+                  </li>
+                  <li className="transition-all hover:translate-x-1 duration-300">
+                    <p className="font-medium">STOCK WIZARD – AN EFFICIENT STOCK SCREENER</p>
+                    <p className="text-sm text-slate-600">
+                      Created with Python, this tool efficiently screens stocks based on various parameters, 
+                      helping users make informed investment decisions.
+                    </p>
+                  </li>
+                  <li className="transition-all hover:translate-x-1 duration-300">
+                    <p className="font-medium">WEATHER DATA VISUALIZATION</p>
+                    <p className="text-sm text-slate-600">
+                      Developed using Python and Streamlit, this app visualizes weather data, 
+                      offering users interactive and insightful weather analytics.
+                    </p>
+                  </li>
+                  <li className="transition-all hover:translate-x-1 duration-300">
+                    <p className="font-medium">Gym Sphere - A Fullstack Gym Management Solutions</p>
+                    <p className="text-sm text-slate-600">
+                      Currently in development. Developed with FastAPI, Supabase, HTML, CSS, JavaScript, PostgreSQL.
+                      It offers a generalized app for solving all the gym management problems.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
                   <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Contact</h4>
