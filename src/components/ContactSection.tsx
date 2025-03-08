@@ -39,6 +39,18 @@ const ContactSection = () => {
     setFormState(prev => ({ ...prev, [name]: value }));
   };
 
+  const getSarcasticResponse = (name: string) => {
+    const responses = [
+      `Oh great, another message from ${name}. I'll add it to my collection of "things I'll definitely read right away."`,
+      `Thank you, ${name}! Your message is now safely tucked away where I might find it... eventually.`,
+      `Message received, ${name}! I'll get back to you... when the stars align perfectly.`,
+      `Wow, ${name}! Your message has been received with all the enthusiasm I can muster at this hour.`,
+      `Congratulations ${name}! Your message has joined the elite club of "emails I might respond to this century."`,
+      `Thanks ${name}! Your message is now in the hands of my assistant's assistant's intern.`
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -54,11 +66,11 @@ const ContactSection = () => {
     //   body: JSON.stringify(formState)
     // })
     
-    // Show success message with toast
+    // Show sarcastic success message with toast
     setTimeout(() => {
       toast({
-        title: "Message Sent Successfully!",
-        description: `Thank you ${formState.name}! Your message has been received and will be delivered to ombarot.dev@gmail.com`,
+        title: "Message Sent... Supposedly!",
+        description: getSarcasticResponse(formState.name),
         duration: 5000,
       });
       
@@ -146,8 +158,8 @@ const ContactSection = () => {
             
             {formSubmitted ? (
               <div className="bg-green-50 text-green-700 p-4 rounded-lg border border-green-200 text-center">
-                <p className="font-medium">Thank you for your message!</p>
-                <p className="text-sm mt-1">I will get back to you as soon as possible.</p>
+                <p className="font-medium">Your message has been sent... to the void!</p>
+                <p className="text-sm mt-1">I'll get back to you when I finish watching every cat video on the internet.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -162,6 +174,7 @@ const ContactSection = () => {
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-portfolio-blue 
                     focus:border-portfolio-blue outline-none transition-all"
+                    placeholder="Your name (I promise I'll remember it... maybe)"
                   />
                 </div>
                 
@@ -176,6 +189,7 @@ const ContactSection = () => {
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-portfolio-blue 
                     focus:border-portfolio-blue outline-none transition-all"
+                    placeholder="Your email (so I can spam you with newsletter signups)"
                   />
                 </div>
                 
@@ -190,6 +204,7 @@ const ContactSection = () => {
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-portfolio-blue 
                     focus:border-portfolio-blue outline-none transition-all"
+                    placeholder="Your message (which I'll definitely read right away and not after three months)"
                   ></textarea>
                 </div>
                 
@@ -199,7 +214,7 @@ const ContactSection = () => {
                   className="w-full bg-gradient-to-r from-portfolio-darkBlue to-portfolio-blue text-white py-2 px-6 
                   rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? 'Pretending to Send...' : 'Send Message (to the Abyss)'}
                 </Button>
               </form>
             )}
