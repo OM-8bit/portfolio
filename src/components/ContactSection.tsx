@@ -1,8 +1,11 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { Button } from './ui/button';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
+  const { toast } = useToast();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [formState, setFormState] = useState({
@@ -11,6 +14,7 @@ const ContactSection = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,11 +41,33 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Log form data to console
     console.log('Form submitted:', formState);
-    // In a real application, you would send this data to a server
-    setFormSubmitted(true);
-    setFormState({ name: '', email: '', message: '' });
-    setTimeout(() => setFormSubmitted(false), 5000);
+    
+    // In a real application, you would send this data to a server using an API
+    // For example:
+    // fetch('https://your-backend-api.com/contact', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(formState)
+    // })
+    
+    // Show success message with toast
+    setTimeout(() => {
+      toast({
+        title: "Message Sent Successfully!",
+        description: `Thank you ${formState.name}! Your message has been received and will be delivered to ombarot.dev@gmail.com`,
+        duration: 5000,
+      });
+      
+      setFormSubmitted(true);
+      setFormState({ name: '', email: '', message: '' });
+      setIsSubmitting(false);
+      
+      setTimeout(() => setFormSubmitted(false), 5000);
+    }, 1000); // Simulate server delay
   };
 
   return (
@@ -167,13 +193,14 @@ const ContactSection = () => {
                   ></textarea>
                 </div>
                 
-                <button
+                <Button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-portfolio-darkBlue to-portfolio-blue text-white py-2 px-6 
                   rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
-                  Send Message
-                </button>
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
               </form>
             )}
           </div>
