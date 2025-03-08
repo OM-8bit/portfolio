@@ -52,7 +52,7 @@ const AboutSection = () => {
             <div className="text-center">
               <Button 
                 className="bg-portfolio-blue hover:bg-portfolio-accent transition-colors duration-300 flex items-center gap-2"
-                onClick={() => window.open("/Om_Barot_Resume.pdf", "_blank")}
+                onClick={() => window.open("https://drive.google.com/file/d/1_eV9RTShhWKuzpCF52_PXPGP37K44Log/view?usp=sharing", "_blank")}
               >
                 <Download size={18} />
                 Download Resume
