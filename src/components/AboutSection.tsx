@@ -72,6 +72,7 @@ const AboutSection = () => {
                 frameworks such as Flask, Django, FastAPI, and Streamlit, with a strong
                 focus on developing high-performance web applications and APIs. Committed to
                 writing clean, maintainable code and continuously learning new technologies.
+                When I'm not coding or debugging other people's messes, I somehow find time to nurture plants (yes, they survive despite my coding schedule) and hit the gym (where I mostly contemplate algorithm optimization between sets).
               </p>
             </div>
             
@@ -182,46 +183,32 @@ const AboutSection = () => {
                 </ul>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
-                  <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Contact</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <span className="font-medium mr-2">Phone:</span>
-                      <span className="text-slate-600">9106237958</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="font-medium mr-2">Email:</span>
-                      <a href="mailto:ombarot.dev@gmail.com" className="text-portfolio-blue hover:underline">
-                        ombarot.dev@gmail.com
-                      </a>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="font-medium mr-2">LinkedIn:</span>
-                      <a href="https://www.linkedin.com/in/om-barot-232630338/" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
-                        www.linkedin.com/in/om-barot-232630338/
-                      </a>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="font-medium mr-2">GitHub:</span>
-                      <a href="https://github.com/OM-8bit" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
-                        github.com/OM-8bit
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
-                  <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Hobbies</h4>
-                  <ul className="list-disc ml-5 space-y-2">
-                    <li className="text-slate-700">EXPLORING NEW PLACES</li>
-                    <li className="text-slate-700">WORKOUT</li>
-                    <li className="text-slate-700">Reading</li>
-                    <li className="text-slate-700">Problem Solving</li>
-                    <li className="text-slate-700">Open Source</li>
-                    <li className="text-slate-700">AI/ML</li>
-                  </ul>
-                </div>
+              <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
+                <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Contact</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="font-medium mr-2">Phone:</span>
+                    <span className="text-slate-600">9106237958</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium mr-2">Email:</span>
+                    <a href="mailto:ombarot.dev@gmail.com" className="text-portfolio-blue hover:underline">
+                      ombarot.dev@gmail.com
+                    </a>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium mr-2">LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/om-barot-232630338/" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
+                      www.linkedin.com/in/om-barot-232630338/
+                    </a>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium mr-2">GitHub:</span>
+                    <a href="https://github.com/OM-8bit" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
+                      github.com/OM-8bit
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
