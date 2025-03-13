@@ -22,12 +22,12 @@ const SkillBar = ({ skill, isVisible }: { skill: Skill; isVisible: boolean }) =>
     <div className={`mb-6 transition-all duration-700 delay-${skill.delay} 
       ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
       <div className="flex justify-between mb-2">
-        <h4 className="font-medium text-white">{skill.name}</h4>
-        <span className="text-sm text-gray-300">{skill.level}/10</span>
+        <h4 className="font-medium text-slate-700">{skill.name}</h4>
+        <span className="text-sm text-portfolio-blue">{skill.level}/10</span>
       </div>
-      <div className="w-full bg-gray-700 rounded-full h-2.5">
+      <div className="w-full bg-gray-200 rounded-full h-2.5">
         <div 
-          className="bg-portfolio-darkBlue h-2.5 rounded-full" 
+          className="bg-portfolio-blue h-2.5 rounded-full" 
           style={{ 
             width: isVisible ? `${skill.level * 10}%` : '0%',
             transition: `width 1.5s ease-out ${skill.delay / 1000}s`
@@ -61,13 +61,13 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section id="skills" className="section-container bg-portfolio-blue" ref={sectionRef}>
+    <section id="skills" className="section-container bg-gray-50" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="mb-12 text-center">
-          <h2 className={`section-heading text-white transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className={`section-heading transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Skills
           </h2>
-          <div className={`section-divider bg-portfolio-darkBlue transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
+          <div className={`section-divider transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
         </div>
 
         <div className="max-w-3xl mx-auto">
