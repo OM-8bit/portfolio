@@ -38,7 +38,7 @@ const projects: Project[] = [
 const ProjectCard = ({ project, index, isVisible }: { project: Project; index: number; isVisible: boolean }) => {
   return (
     <div 
-      className={`project-card bg-white p-6 rounded-xl shadow-md transition-all duration-700 delay-${index * 200} 
+      className={`project-card p-6 transition-all duration-700 delay-${index * 200} 
       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
     >
       <h3 className="text-xl font-bold mb-2 text-portfolio-accent">{project.title}</h3>
@@ -80,15 +80,13 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="projects" className="section-container bg-gray-50" ref={sectionRef}>
+    <section id="projects" className="section-container bg-white" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="mb-12 text-center">
-          <h2 className={`text-3xl md:text-4xl font-bold mb-4 text-gradient 
-            transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className={`section-heading transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Projects
           </h2>
-          <div className={`h-1 w-20 bg-portfolio-blue mx-auto rounded-full
-            transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
+          <div className={`section-divider transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

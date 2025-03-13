@@ -61,15 +61,13 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section id="skills" className="section-container bg-white" ref={sectionRef}>
+    <section id="skills" className="section-container bg-gray-50" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="mb-12 text-center">
-          <h2 className={`text-3xl md:text-4xl font-bold mb-4 text-gradient 
-            transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className={`section-heading transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Skills
           </h2>
-          <div className={`h-1 w-20 bg-portfolio-blue mx-auto rounded-full
-            transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
+          <div className={`section-divider transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
         </div>
 
         <div className="max-w-3xl mx-auto">

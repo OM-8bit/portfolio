@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +13,20 @@ const Navbar = () => {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
+      }
+
+      // Update active section based on scroll position
+      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
       }
     };
 
@@ -24,6 +39,7 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setMobileMenuOpen(false);
+      setActiveSection(id);
     }
   };
 
@@ -41,11 +57,11 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
-            <li><button onClick={() => scrollToSection('home')} className="nav-link">Home</button></li>
-            <li><button onClick={() => scrollToSection('about')} className="nav-link">About</button></li>
-            <li><button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button></li>
-            <li><button onClick={() => scrollToSection('skills')} className="nav-link">Skills</button></li>
-            <li><button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button></li>
+            <li><button onClick={() => scrollToSection('home')} className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</button></li>
+            <li><button onClick={() => scrollToSection('about')} className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</button></li>
+            <li><button onClick={() => scrollToSection('skills')} className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</button></li>
+            <li><button onClick={() => scrollToSection('projects')} className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</button></li>
+            <li><button onClick={() => scrollToSection('contact')} className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</button></li>
           </ul>
         </nav>
 
@@ -59,10 +75,11 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <nav className="md:hidden glass mt-3 py-4 px-6 animate-fade-in">
           <ul className="flex flex-col space-y-4">
-            <li><button onClick={() => scrollToSection('home')} className="nav-link">Home</button></li>
-            <li><button onClick={() => scrollToSection('about')} className="nav-link">About</button></li>
-            <li><button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button></li>
-            <li><button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button></li>
+            <li><button onClick={() => scrollToSection('home')} className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</button></li>
+            <li><button onClick={() => scrollToSection('about')} className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</button></li>
+            <li><button onClick={() => scrollToSection('skills')} className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</button></li>
+            <li><button onClick={() => scrollToSection('projects')} className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</button></li>
+            <li><button onClick={() => scrollToSection('contact')} className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</button></li>
           </ul>
         </nav>
       )}
