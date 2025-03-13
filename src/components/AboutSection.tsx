@@ -76,9 +76,9 @@ const AboutSection = () => {
               </p>
             </div>
             
-            <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-700 delay-800 
+            <div className={`transition-all duration-700 delay-800 
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
+              <div className="bg-slate-50 p-6 rounded-xl shadow-sm mb-8">
                 <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Education</h4>
                 <ul className="space-y-4">
                   <li className="transition-all hover:translate-x-1 duration-300">
@@ -98,117 +98,69 @@ const AboutSection = () => {
                 </ul>
               </div>
               
-              <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
-                <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Skills</h4>
-                <div className="space-y-3">
-                  <div>
-                    <p className="font-medium">Python</p>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="font-medium">Java</p>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '80%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="font-medium">FastAPI</p>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="font-medium">Flask</p>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="font-medium">SupaBase</p>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="font-medium">Streamlit</p>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '80%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="font-medium">Power BI</p>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
-                      <div className="bg-portfolio-blue h-2.5 rounded-full" style={{ width: '70%' }}></div>
-                    </div>
-                  </div>
+              <div className={`mt-8 transition-all duration-700 delay-1000 
+                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <div className="bg-slate-50 p-6 rounded-xl shadow-sm mb-8">
+                  <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Projects</h4>
+                  <ul className="space-y-4">
+                    <li className="transition-all hover:translate-x-1 duration-300">
+                      <p className="font-medium">1) SMART BIN :-</p>
+                      <p className="text-sm text-slate-600">
+                        Presented at a hackathon, this project is a smart waste management system 
+                        built using Java and Flutter, designed to optimize waste collection and disposal.
+                      </p>
+                    </li>
+                    <li className="transition-all hover:translate-x-1 duration-300">
+                      <p className="font-medium">2) STOCK WIZARD – AN EFFICIENT STOCK SCREENER(CURRENTLY WORKING):-</p>
+                      <p className="text-sm text-slate-600">
+                        Created with Python, this tool efficiently screens stocks based on various parameters, 
+                        helping users make informed investment decisions. User experience for listing, purchasing, and managing groceries.
+                      </p>
+                    </li>
+                    <li className="transition-all hover:translate-x-1 duration-300">
+                      <p className="font-medium">3) WEATHER DATA VISUALIZATION :-</p>
+                      <p className="text-sm text-slate-600">
+                        Developed using Python and Streamlit, this app visualizes weather data, 
+                        offering users interactive and insightful weather analytics.
+                      </p>
+                    </li>
+                    <li className="transition-all hover:translate-x-1 duration-300">
+                      <p className="font-medium">4) Gym Sphere - A Fullstack Gym Management Solutions (currently working)</p>
+                      <p className="text-sm text-slate-600">
+                        Currently in development. Admin site is ready. Developed with FastAPI, Supabase, HTML, CSS, JavaScript, PostgreSQL.
+                        It offers a generalized app for solving all the gym management problems.
+                      </p>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-            </div>
-            
-            <div className={`mt-8 transition-all duration-700 delay-1000 
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="bg-slate-50 p-6 rounded-xl shadow-sm mb-8">
-                <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Projects</h4>
-                <ul className="space-y-4">
-                  <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">1) SMART BIN :-</p>
-                    <p className="text-sm text-slate-600">
-                      Presented at a hackathon, this project is a smart waste management system 
-                      built using Java and Flutter, designed to optimize waste collection and disposal.
-                    </p>
-                  </li>
-                  <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">2) STOCK WIZARD – AN EFFICIENT STOCK SCREENER(CURRENTLY WORKING):-</p>
-                    <p className="text-sm text-slate-600">
-                      Created with Python, this tool efficiently screens stocks based on various parameters, 
-                      helping users make informed investment decisions. User experience for listing, purchasing, and managing groceries.
-                    </p>
-                  </li>
-                  <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">3) WEATHER DATA VISUALIZATION :-</p>
-                    <p className="text-sm text-slate-600">
-                      Developed using Python and Streamlit, this app visualizes weather data, 
-                      offering users interactive and insightful weather analytics.
-                    </p>
-                  </li>
-                  <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">4) Gym Sphere - A Fullstack Gym Management Solutions (currently working)</p>
-                    <p className="text-sm text-slate-600">
-                      Currently in development. Admin site is ready. Developed with FastAPI, Supabase, HTML, CSS, JavaScript, PostgreSQL.
-                      It offers a generalized app for solving all the gym management problems.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
-                <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Contact</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="font-medium mr-2">Phone:</span>
-                    <span className="text-slate-600">9106237958</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-medium mr-2">Email:</span>
-                    <a href="mailto:ombarot.dev@gmail.com" className="text-portfolio-blue hover:underline">
-                      ombarot.dev@gmail.com
-                    </a>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-medium mr-2">LinkedIn:</span>
-                    <a href="https://www.linkedin.com/in/om-barot-232630338/" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
-                      www.linkedin.com/in/om-barot-232630338/
-                    </a>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-medium mr-2">GitHub:</span>
-                    <a href="https://github.com/OM-8bit" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
-                      github.com/OM-8bit
-                    </a>
-                  </li>
-                </ul>
+                
+                <div className="bg-slate-50 p-6 rounded-xl shadow-sm">
+                  <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Contact</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <span className="font-medium mr-2">Phone:</span>
+                      <span className="text-slate-600">9106237958</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="font-medium mr-2">Email:</span>
+                      <a href="mailto:ombarot.dev@gmail.com" className="text-portfolio-blue hover:underline">
+                        ombarot.dev@gmail.com
+                      </a>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="font-medium mr-2">LinkedIn:</span>
+                      <a href="https://www.linkedin.com/in/om-barot-232630338/" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
+                        www.linkedin.com/in/om-barot-232630338/
+                      </a>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="font-medium mr-2">GitHub:</span>
+                      <a href="https://github.com/OM-8bit" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
+                        github.com/OM-8bit
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
