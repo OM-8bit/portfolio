@@ -38,7 +38,7 @@ const HeroSection = () => {
         <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto mb-10">
             A passionate software developer specializing in Python and Java,
-            building scalable and high-performance web applications.
+            building scalable and high-performance applications.
           </p>
         </div>
         
