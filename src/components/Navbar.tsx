@@ -68,7 +68,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-8">
+          <ul className="flex space-x-8 items-center">
             <li><button onClick={() => scrollToSection('home')} className={`nav-link ${activeSection === 'home' && isHomePage ? 'active' : ''}`}>Home</button></li>
             <li><button onClick={() => scrollToSection('about')} className={`nav-link ${activeSection === 'about' && isHomePage ? 'active' : ''}`}>About</button></li>
             <li><button onClick={() => scrollToSection('venture')} className={`nav-link ${activeSection === 'venture' && isHomePage ? 'active' : ''}`}>My Venture</button></li>
