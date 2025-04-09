@@ -135,11 +135,11 @@
   
   /* Blog Styles */
   .prose h2 {
-    @apply text-2xl font-semibold text-portfolio-accent mt-8 mb-4;
+    @apply text-2xl font-semibold mt-8 mb-4;
   }
   
   .prose h3 {
-    @apply text-xl font-medium text-portfolio-darkBlue mt-6 mb-3;
+    @apply text-xl font-medium mt-6 mb-3;
   }
   
   .prose p {
