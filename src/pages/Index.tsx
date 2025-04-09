@@ -8,8 +8,24 @@ import ProjectsSection from '@/components/ProjectsSection';
 import SkillsSection from '@/components/SkillsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import { useLocation } from 'react-router-dom';
 
 const Index = () => {
+  const location = useLocation();
+  
+  // Handle hash links for smooth scrolling
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   // Add scroll-based animations
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,7 +49,9 @@ const Index = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <HeroSection />
+      <div id="home">
+        <HeroSection />
+      </div>
       <AboutSection />
       <VentureSection />
       <SkillsSection />

@@ -1,7 +1,8 @@
 
 import { useEffect, useRef, useState } from 'react';
-import { Globe, ArrowUpRight } from 'lucide-react';
+import { Globe, ArrowUpRight, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const VentureSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -41,8 +42,12 @@ const VentureSection = () => {
               <div className="lg:w-2/5 bg-portfolio-accent p-8 text-white">
                 <div className="h-full flex flex-col justify-between">
                   <div>
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                      <Globe size={24} className="text-white" />
+                    <div className="w-20 h-20 bg-black/20 rounded-full flex items-center justify-center mb-6 overflow-hidden">
+                      <img 
+                        src="/lovable-uploads/84a79e31-dba8-4e43-bd53-b3a5ef40a210.png" 
+                        alt="MetaMotives Logo"
+                        className="w-full h-full object-cover" 
+                      />
                     </div>
                     <h3 className="text-2xl font-bold mb-4">MetaMotives</h3>
                     <p className="text-white/90 mb-6">Digital Presence Agency</p>
@@ -83,13 +88,25 @@ const VentureSection = () => {
                   </li>
                 </ul>
                 
-                <Button 
-                  className="bg-portfolio-accent hover:bg-portfolio-accent/80 transition-colors duration-300 flex items-center gap-2"
-                  onClick={() => window.open("https://metamotives.world", "_blank")}
-                >
-                  Visit MetaMotives
-                  <ArrowUpRight size={16} />
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    className="bg-portfolio-accent hover:bg-portfolio-accent/80 transition-colors duration-300 flex items-center gap-2"
+                    onClick={() => window.open("https://metamotives.world", "_blank")}
+                  >
+                    Visit MetaMotives
+                    <ArrowUpRight size={16} />
+                  </Button>
+                  
+                  <Link to="/blog">
+                    <Button 
+                      variant="outline"
+                      className="border-portfolio-accent text-portfolio-accent hover:bg-portfolio-accent/10 transition-colors duration-300 flex items-center gap-2"
+                    >
+                      Read Our Blog
+                      <BookOpen size={16} />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
