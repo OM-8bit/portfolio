@@ -16,7 +16,7 @@ const Navbar = () => {
       }
 
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'venture', 'skills', 'projects', 'contact'];
       
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -59,6 +59,7 @@ const Navbar = () => {
           <ul className="flex space-x-8">
             <li><button onClick={() => scrollToSection('home')} className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</button></li>
             <li><button onClick={() => scrollToSection('about')} className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</button></li>
+            <li><button onClick={() => scrollToSection('venture')} className={`nav-link ${activeSection === 'venture' ? 'active' : ''}`}>My Venture</button></li>
             <li><button onClick={() => scrollToSection('skills')} className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</button></li>
             <li><button onClick={() => scrollToSection('projects')} className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</button></li>
             <li><button onClick={() => scrollToSection('contact')} className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</button></li>
@@ -77,6 +78,7 @@ const Navbar = () => {
           <ul className="flex flex-col space-y-4">
             <li><button onClick={() => scrollToSection('home')} className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</button></li>
             <li><button onClick={() => scrollToSection('about')} className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</button></li>
+            <li><button onClick={() => scrollToSection('venture')} className={`nav-link ${activeSection === 'venture' ? 'active' : ''}`}>My Venture</button></li>
             <li><button onClick={() => scrollToSection('skills')} className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}>Skills</button></li>
             <li><button onClick={() => scrollToSection('projects')} className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</button></li>
             <li><button onClick={() => scrollToSection('contact')} className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</button></li>
