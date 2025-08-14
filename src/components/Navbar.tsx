@@ -76,6 +76,21 @@ const Navbar = () => {
             <li><button onClick={() => scrollToSection('projects')} className={`nav-link ${activeSection === 'projects' && isHomePage ? 'active' : ''}`}>Projects</button></li>
             <li><button onClick={() => scrollToSection('contact')} className={`nav-link ${activeSection === 'contact' && isHomePage ? 'active' : ''}`}>Contact</button></li>
             <li><Link to="/blog" className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`}>Blog</Link></li>
+            <li>
+              <button 
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Om_Barot_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="modern-gradient text-white px-4 py-2 rounded-full hover:opacity-90 transition-all duration-300 text-sm"
+              >
+                Resume
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -96,6 +111,21 @@ const Navbar = () => {
             <li><button onClick={() => scrollToSection('projects')} className={`nav-link ${activeSection === 'projects' && isHomePage ? 'active' : ''}`}>Projects</button></li>
             <li><button onClick={() => scrollToSection('contact')} className={`nav-link ${activeSection === 'contact' && isHomePage ? 'active' : ''}`}>Contact</button></li>
             <li><Link to="/blog" className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`}>Blog</Link></li>
+            <li>
+              <button 
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Om_Barot_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="modern-gradient text-white px-4 py-2 rounded-full hover:opacity-90 transition-all duration-300 text-sm"
+              >
+                Resume
+              </button>
+            </li>
           </ul>
         </nav>
       )}

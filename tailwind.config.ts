@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				portfolio: {
-					blue: '#7a9cc6',
-					darkBlue: '#4a6d98',
-					text: '#1A1F2C',
-					light: '#f5f7fa',
-					accent: '#3d5a80'
+					blue: 'hsl(262 83% 58%)',
+					darkBlue: 'hsl(258 90% 66%)',
+					text: 'hsl(0 0% 98%)',
+					light: 'hsl(240 10% 3.9%)',
+					accent: 'hsl(282 85% 60%)'
 				}
 			},
 			borderRadius: {
@@ -112,6 +112,22 @@ export default {
 				'progress-fill': {
 					'0%': { width: '0%' },
 					'100%': { width: 'var(--progress-width)' }
+				},
+				'typing': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
+				},
+				'blink': {
+					'0%, 50%': { borderColor: 'transparent' },
+					'100%': { borderColor: 'hsl(var(--primary))' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 20px hsl(262 83% 58% / 0.3)' },
+					'50%': { boxShadow: '0 0 40px hsl(262 83% 58% / 0.6)' }
 				}
 			},
 			animation: {
@@ -123,7 +139,11 @@ export default {
 				'slide-up': 'slide-up 0.9s ease-out forwards',
 				'slide-down': 'slide-down 0.9s ease-out forwards',
 				'scale-in': 'scale-in 0.7s ease-out forwards',
-				'progress-fill': 'progress-fill 1.5s ease-out forwards'
+				'progress-fill': 'progress-fill 1.5s ease-out forwards',
+				'typing': 'typing 3s steps(40, end) infinite',
+				'blink': 'blink 1s infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
 			}
 		}
 	},

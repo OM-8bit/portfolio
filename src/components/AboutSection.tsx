@@ -25,8 +25,17 @@ const AboutSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Om_Barot_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <section id="about" className="section-container bg-white" ref={sectionRef}>
+    <section id="about" className="section-container bg-muted/50" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className={`text-3xl md:text-4xl font-bold mb-4 text-gradient 
@@ -51,8 +60,8 @@ const AboutSection = () => {
             
             <div className="text-center">
               <Button 
-                className="bg-portfolio-blue hover:bg-portfolio-accent transition-colors duration-300 flex items-center gap-2"
-                onClick={() => window.open("https://drive.google.com/file/d/1_eV9RTShhWKuzpCF52_PXPGP37K44Log/view?usp=sharing", "_blank")}
+                className="modern-gradient text-white hover:opacity-90 transition-all duration-300 flex items-center gap-2 glow-effect"
+                onClick={downloadResume}
               >
                 <Download size={18} />
                 Download Resume
@@ -76,29 +85,8 @@ const AboutSection = () => {
               </p>
             </div>
             
-            <div className={`transition-all duration-700 delay-800 
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="bg-slate-50 p-6 rounded-xl shadow-sm mb-8">
-                <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Education</h4>
-                <ul className="space-y-4">
-                  <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">S.S.C (G.S.E.B)</p>
-                    <p className="text-sm text-slate-600">2020 - 98.85 pr</p>
-                  </li>
-                  <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">H.S.C (SCIENCE STREAM)</p>
-                    <p className="text-sm text-slate-600">2022 - 58%</p>
-                  </li>
-                  <li className="transition-all hover:translate-x-1 duration-300">
-                    <p className="font-medium">B.TECH (COMPUTER SCIENCE)</p>
-                    <p className="text-sm text-slate-600">2022-2026</p>
-                    <p className="text-sm text-slate-600">Specialization: DATA SCIENCE</p>
-                    <p className="text-sm text-slate-600">[PASSED ALL THE SEMESTERS WITH ATLEAST 9 CGPA]</p>
-                  </li>
-                </ul>
-              </div>
               
-              <div className={`mt-8 transition-all duration-700 delay-1000 
+              <div className={`transition-all duration-700 delay-800 
                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="bg-slate-50 p-6 rounded-xl shadow-sm mb-8">
                   <h4 className="text-lg font-semibold mb-4 text-portfolio-accent border-b pb-2">Projects</h4>
@@ -165,9 +153,8 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    );
+  };
 
 export default AboutSection;
