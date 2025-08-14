@@ -30,13 +30,100 @@ endobj
 
 4 0 obj
 <<
-/Length 44
+/Length 2800
 >>
 stream
 BT
+/F1 16 Tf
+50 750 Td
+(Om Barot) Tj
+0 -20 Td
 /F1 12 Tf
-100 700 Td
-(Om Barot - Resume) Tj
+(9106237958) Tj
+0 -15 Td
+(ombarot.dev@gmail.com) Tj
+0 -15 Td
+(linkedin.com/in/om-barot-232630338/) Tj
+0 -15 Td
+(ombarot.netlify.app) Tj
+0 -15 Td
+(Vadodara, Gujarat, 390019) Tj
+0 -15 Td
+(https://github.com/OM-8bit) Tj
+
+0 -30 Td
+/F1 14 Tf
+(Summary) Tj
+0 -20 Td
+/F1 10 Tf
+(Innovative and detail-oriented professional with expertise in AI systems, data science, and automation.) Tj
+0 -12 Td
+(Skilled in building intelligent solutions that combine machine learning, natural language processing,) Tj
+0 -12 Td
+(and data analytics to solve real-world problems. Proficient in Python, modern AI frameworks, and) Tj
+0 -12 Td
+(data engineering, with experience in deploying scalable, production-ready applications. Adept at) Tj
+0 -12 Td
+(bridging technical complexity with clear, actionable insights for business impact.) Tj
+
+0 -30 Td
+/F1 14 Tf
+(Skills) Tj
+0 -20 Td
+/F1 10 Tf
+(PYTHON | DJANGO | FASTAPI | FLASK | GENERATIVE AI | OPENCV | MSOFFICE) Tj
+0 -15 Td
+(AGENTIC AI | PROMPT ENGINEERING | GIT | GITHUB | API INTEGRATIONS | LLM | NUMPY) Tj
+0 -15 Td
+(PANDAS | TENSORFLOW | PYTORCH | spaCy | HuggingFace Transformers | dockerCICD | CICD) Tj
+
+0 -30 Td
+/F1 14 Tf
+(Projects) Tj
+0 -20 Td
+/F1 12 Tf
+(Gymsphere - SaaS Gym Management Platform) Tj
+0 -15 Td
+/F1 10 Tf
+(Tech Stack: FastAPI, Supabase, Docker, React, PostgreSQL) Tj
+0 -12 Td
+(• Developed a full-stack SaaS platform for gym membership and attendance management.) Tj
+0 -12 Td
+(• Implemented real-time data synchronization with Supabase for instant updates across users.) Tj
+0 -12 Td
+(• Built a FastAPI backend with REST APIs for member CRUD operations, attendance tracking, and authentication.) Tj
+0 -12 Td
+(• Designed an intuitive React frontend with responsive UI for managing members, tracking check-ins, and handling subscriptions.) Tj
+0 -12 Td
+(• Containerized the application with Docker for consistent deployments across environments.) Tj
+
+0 -25 Td
+/F1 12 Tf
+(Enterprise Background Remover & Passport Photo Generator) Tj
+0 -15 Td
+/F1 10 Tf
+(Tech Stack: FastAPI, React, TypeScript, Rembg, OpenCV, HuggingFace Transformers, Docker) Tj
+0 -12 Td
+(• Created an enterprise-grade image processing application for AI-powered background removal and passport-size photo generation.) Tj
+0 -12 Td
+(• Leveraged HuggingFace Transformers and Rembg for high-accuracy segmentation and background isolation.) Tj
+0 -12 Td
+(• Utilized OpenCV for automated resizing, cropping, and standardized passport photo formatting.) Tj
+0 -12 Td
+(• Developed a scalable FastAPI backend with high-throughput API endpoints for bulk image processing.) Tj
+0 -12 Td
+(• Built a TypeScript + React interface with drag-and-drop uploads, real-time previews, and batch processing support.) Tj
+0 -12 Td
+(• Deployed in Docker containers for portability, scalability, and consistent performance across environments.) Tj
+
+0 -30 Td
+/F1 14 Tf
+(Education) Tj
+0 -20 Td
+/F1 10 Tf
+(ITM VOCATIONAL UNIVERSITY, Vadodara, Gujarat.) Tj
+0 -12 Td
+(B.tech - CSE \(DS\), CGPA: 9.5) Tj
 ET
 endstream
 endobj
@@ -56,12 +143,12 @@ xref
 0000000053 00000 n 
 0000000108 00000 n 
 0000000251 00000 n 
-0000000344 00000 n 
+0000003100 00000 n 
 trailer
 <<
 /Size 6
 /Root 1 0 R
 >>
 startxref
-441
+3157
 %%EOF

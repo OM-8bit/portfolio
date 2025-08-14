@@ -11,10 +11,14 @@ const skills: Skill[] = [
   { name: 'Python', level: 9, delay: 0 },
   { name: 'Java', level: 8, delay: 200 },
   { name: 'FastAPI', level: 9, delay: 400 },
-  { name: 'Flask', level: 9, delay: 600 },
-  { name: 'SupaBase', level: 9, delay: 800 },
-  { name: 'Streamlit', level: 8, delay: 1000 },
-  { name: 'Power BI', level: 7, delay: 1200 }
+  { name: 'Django', level: 8, delay: 600 },
+  { name: 'Flask', level: 9, delay: 800 },
+  { name: 'Docker', level: 7, delay: 1000 },
+  { name: 'CI/CD', level: 9, delay: 1200 },
+  { name: 'GitHub', level: 8.5, delay: 1400 },
+  { name: 'SupaBase', level: 9, delay: 1600 },
+  { name: 'Streamlit', level: 8, delay: 1800 },
+  { name: 'Power BI', level: 7, delay: 2000 }
 ];
 
 const SkillBar = ({ skill, isVisible }: { skill: Skill; isVisible: boolean }) => {
@@ -22,12 +26,12 @@ const SkillBar = ({ skill, isVisible }: { skill: Skill; isVisible: boolean }) =>
     <div className={`mb-6 transition-all duration-700 delay-${skill.delay} 
       ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
       <div className="flex justify-between mb-2">
-        <h4 className="font-medium text-slate-700">{skill.name}</h4>
-        <span className="text-sm text-portfolio-blue">{skill.level}/10</span>
+        <h4 className="font-medium text-foreground">{skill.name}</h4>
+        <span className="text-sm text-primary font-semibold">{skill.level}/10</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5">
+      <div className="w-full bg-muted rounded-full h-2.5">
         <div 
-          className="bg-portfolio-blue h-2.5 rounded-full" 
+          className="modern-gradient h-2.5 rounded-full" 
           style={{ 
             width: isVisible ? `${skill.level * 10}%` : '0%',
             transition: `width 1.5s ease-out ${skill.delay / 1000}s`
@@ -61,7 +65,7 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section id="skills" className="section-container bg-gray-50" ref={sectionRef}>
+    <section id="skills" className="section-container bg-muted/30" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className={`section-heading transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
