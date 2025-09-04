@@ -55,7 +55,7 @@ const HeroSection = () => {
         
         <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground">
-            <span className="text-gradient">Om Barot</span>
+            Om Barot
           </h1>
         </div>
         

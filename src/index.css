@@ -89,8 +89,16 @@
   }
 
   .text-gradient {
-    @apply text-transparent bg-clip-text;
-    background: var(--gradient-primary);
+    color: hsl(var(--foreground));
+    background: none;
+  }
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .text-gradient {
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background: var(--gradient-primary);
+    }
   }
 
   .modern-gradient {

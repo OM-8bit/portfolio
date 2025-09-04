@@ -51,7 +51,7 @@ const ProjectCard = ({ project, index, isVisible }: { project: Project; index: n
       hover:border-primary/50 hover:glow-effect group
       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
     >
-      <h3 className="text-xl font-bold mb-2 text-gradient group-hover:text-primary transition-colors">
+      <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
         {project.title}
       </h3>
       <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
