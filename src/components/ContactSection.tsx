@@ -83,7 +83,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section-container bg-gray-50" ref={sectionRef}>
+    <section id="contact" className="section-container bg-muted/30" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className={`text-3xl md:text-4xl font-bold mb-4 text-gradient 
@@ -92,7 +92,7 @@ const ContactSection = () => {
           </h2>
           <div className={`h-1 w-20 bg-portfolio-blue mx-auto rounded-full
             transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
-          <p className={`mt-4 text-slate-600 max-w-xl mx-auto transition-all duration-700 delay-300 
+          <p className={`mt-4 text-muted-foreground max-w-xl mx-auto transition-all duration-700 delay-300 
             ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Feel free to reach out to me for any questions, opportunities, or just to say hello!
           </p>
@@ -110,7 +110,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Phone</h4>
-                  <p className="text-slate-600">9106237958</p>
+                  <p className="text-muted-foreground">9106237958</p>
                 </div>
               </div>
               
@@ -164,7 +164,7 @@ const ContactSection = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">Name</label>
                   <input
                     type="text"
                     id="name"
@@ -172,14 +172,14 @@ const ContactSection = () => {
                     value={formState.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-portfolio-blue 
+                    className="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-portfolio-blue 
                     focus:border-portfolio-blue outline-none transition-all"
                     placeholder="Your name (I promise I'll remember it... maybe)"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">Email</label>
                   <input
                     type="email"
                     id="email"
@@ -187,14 +187,14 @@ const ContactSection = () => {
                     value={formState.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-portfolio-blue 
+                    className="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-portfolio-blue 
                     focus:border-portfolio-blue outline-none transition-all"
                     placeholder="Your email (so I can spam you with newsletter signups)"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">Message</label>
                   <textarea
                     id="message"
                     name="message"
@@ -202,7 +202,7 @@ const ContactSection = () => {
                     value={formState.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-portfolio-blue 
+                    className="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-portfolio-blue 
                     focus:border-portfolio-blue outline-none transition-all"
                     placeholder="Your message (which I'll definitely read right away and not after three months)"
                   ></textarea>

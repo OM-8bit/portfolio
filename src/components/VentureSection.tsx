@@ -27,7 +27,7 @@ const VentureSection = () => {
   }, []);
 
   return (
-    <section id="venture" className="section-container bg-gray-50" ref={sectionRef}>
+    <section id="venture" className="section-container bg-muted/30" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h2 className={`section-heading transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
@@ -62,7 +62,7 @@ const VentureSection = () => {
               
               <div className="lg:w-3/5 p-8">
                 <h4 className="text-xl font-semibold mb-4 text-portfolio-accent">About MetaMotives</h4>
-                <p className="text-gray-700 mb-6">
+                <p className="text-muted-foreground mb-6">
                   MetaMotives is a digital presence agency focused on helping businesses and individuals establish a powerful online footprint. 
                   We specialize in creating compelling digital identities through strategic web development, social media management, 
                   and innovative digital marketing solutions.

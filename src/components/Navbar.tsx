@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'glass py-3' : 'bg-transparent py-6'
+      isScrolled ? 'backdrop-blur-lg bg-background/70 border-b border-border py-3' : 'bg-transparent py-6'
     }`}>
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center">
@@ -102,7 +102,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <nav className="md:hidden glass mt-3 py-4 px-6 animate-fade-in">
+        <nav className="md:hidden mt-3 py-4 px-6 animate-fade-in backdrop-blur-lg bg-background/80 border border-border rounded-xl">
           <ul className="flex flex-col space-y-4">
             <li><button onClick={() => scrollToSection('home')} className={`nav-link ${activeSection === 'home' && isHomePage ? 'active' : ''}`}>Home</button></li>
             <li><button onClick={() => scrollToSection('about')} className={`nav-link ${activeSection === 'about' && isHomePage ? 'active' : ''}`}>About</button></li>
