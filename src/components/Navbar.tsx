@@ -61,7 +61,7 @@ const Navbar = () => {
     }`}>
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/" className="text-xl md:text-2xl font-bold text-portfolio-accent">
+          <Link to="/" className="text-xl md:text-2xl font-bold text-primary">
             Om Barot
           </Link>
         </div>
@@ -95,7 +95,7 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <button className="md:hidden text-foreground" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

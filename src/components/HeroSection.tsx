@@ -50,20 +50,20 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-6 md:px-12 z-10 flex flex-col items-center justify-center text-center">
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-xl md:text-2xl text-primary font-medium mb-3">Hello, I'm</h2>
+          <h2 className="text-xl md:text-2xl text-foreground font-medium mb-3">Hello, I'm</h2>
         </div>
         
         <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient glow-effect">
-            Om Barot
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground">
+            <span className="text-gradient">Om Barot</span>
           </h1>
         </div>
         
         <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-foreground h-16 flex items-center justify-center">
-            <TypingAnimation texts={typingTexts} speed={150} className="text-gradient" />
+            <TypingAnimation texts={typingTexts} speed={150} className="text-primary" />
           </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10">
             A passionate software developer specializing in Python and Java,
             building scalable and high-performance applications.
           </p>
