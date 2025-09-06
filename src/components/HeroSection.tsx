@@ -25,7 +25,7 @@ const HeroSection = () => {
     "I'm a Developer",
     "I work with Python and Java mainly",
     "But I also like to work in DevOps",
-    "I also turn ideas into code"
+    "I turn grass into code"
   ];
 
   const downloadResume = () => {
