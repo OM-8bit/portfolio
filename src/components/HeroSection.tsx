@@ -23,8 +23,9 @@ const HeroSection = () => {
 
   const typingTexts = [
     "I'm a Developer",
-    "I Build SaaS Apps", 
-    "I Work with AI & Cloud"
+    "I work with Python and Java mainly",
+    "But I also like to work in DevOps",
+    "I also turn ideas into code"
   ];
 
   const downloadResume = () => {
