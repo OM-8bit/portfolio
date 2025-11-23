@@ -1,6 +1,5 @@
-
 import { useEffect, useRef, useState } from 'react';
-import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Send } from 'lucide-react';
 import { Button } from './ui/button';
 import { useToast } from '@/hooks/use-toast';
 
@@ -55,18 +54,8 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Log form data to console
     console.log('Form submitted:', formState);
     
-    // In a real application, you would send this data to a server using an API
-    // For example:
-    // fetch('https://your-backend-api.com/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(formState)
-    // })
-    
-    // Show sarcastic success message with toast
     setTimeout(() => {
       toast({
         title: "Message Sent... Supposedly!",
@@ -79,145 +68,146 @@ const ContactSection = () => {
       setIsSubmitting(false);
       
       setTimeout(() => setFormSubmitted(false), 5000);
-    }, 1000); // Simulate server delay
+    }, 1000);
   };
 
+  const contactMethods = [
+    { icon: Phone, label: 'Phone', value: '9106237958', href: 'tel:9106237958' },
+    { icon: Mail, label: 'Email', value: 'ombarot.dev@gmail.com', href: 'mailto:ombarot.dev@gmail.com' },
+    { icon: Linkedin, label: 'LinkedIn', value: 'om-barot-232630338', href: 'https://www.linkedin.com/in/om-barot-232630338/' },
+    { icon: Github, label: 'GitHub', value: 'OM-8bit', href: 'https://github.com/OM-8bit' }
+  ];
+
   return (
-    <section id="contact" className="section-container bg-muted/30" ref={sectionRef}>
-      <div className="container mx-auto">
-        <div className="mb-12 text-center">
-          <h2 className={`text-3xl md:text-4xl font-bold mb-4 text-gradient 
-            transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <section id="contact" className="section-container relative" ref={sectionRef}>
+      {/* Background effects */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto relative z-10">
+        <div className="mb-16 text-center">
+          <h2 className={`section-heading transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Let's Connect
           </h2>
-          <div className={`h-1 w-20 bg-portfolio-blue mx-auto rounded-full
-            transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
-          <p className={`mt-4 text-muted-foreground max-w-xl mx-auto transition-all duration-700 delay-300 
-            ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            Feel free to reach out to me for any questions, opportunities, or just to say hello!
+          <div className={`section-divider transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}></div>
+          <p className={`section-description transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            Feel free to reach out for collaborations, opportunities, or just a friendly conversation
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+          {/* Contact Information */}
           <div className={`transition-all duration-700 delay-400 
             ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <h3 className="text-xl font-bold mb-6 text-portfolio-accent">Contact Information</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-portfolio-blue/10 p-3 rounded-full mr-4">
-                  <Phone className="text-portfolio-blue h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">Phone</h4>
-                  <p className="text-muted-foreground">9106237958</p>
-                </div>
-              </div>
+            <div className="luxury-card h-full">
+              <h3 className="text-2xl font-light mb-8 text-foreground tracking-wide">Get in Touch</h3>
               
-              <div className="flex items-start">
-                <div className="bg-portfolio-blue/10 p-3 rounded-full mr-4">
-                  <Mail className="text-portfolio-blue h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">Email</h4>
-                  <a href="mailto:ombarot.dev@gmail.com" className="text-portfolio-blue hover:underline">
-                    ombarot.dev@gmail.com
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-portfolio-blue/10 p-3 rounded-full mr-4">
-                  <Linkedin className="text-portfolio-blue h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/om-barot-232630338/" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
-                    om-barot-232630338
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-portfolio-blue/10 p-3 rounded-full mr-4">
-                  <Github className="text-portfolio-blue h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">GitHub</h4>
-                  <a href="https://github.com/OM-8bit" target="_blank" rel="noopener noreferrer" className="text-portfolio-blue hover:underline">
-                    OM-8bit
-                  </a>
-                </div>
+              <div className="space-y-6">
+                {contactMethods.map((method, idx) => (
+                  <div key={idx} className="flex items-start gap-4 group">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center
+                    group-hover:bg-primary/20 transition-all duration-500 group-hover:scale-110">
+                      <method.icon className="text-primary w-5 h-5" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-light text-muted-foreground mb-1">{method.label}</h4>
+                      {method.href.startsWith('http') ? (
+                        <a 
+                          href={method.href} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-foreground hover:text-primary transition-colors font-light"
+                        >
+                          {method.value}
+                        </a>
+                      ) : (
+                        <a 
+                          href={method.href}
+                          className="text-foreground hover:text-primary transition-colors font-light"
+                        >
+                          {method.value}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
           
+          {/* Contact Form */}
           <div className={`transition-all duration-700 delay-600 
             ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <h3 className="text-xl font-bold mb-6 text-portfolio-accent">Send Message</h3>
-            
-            {formSubmitted ? (
-              <div className="bg-green-50 text-green-700 p-4 rounded-lg border border-green-200 text-center">
-                <p className="font-medium">Your message has been sent... to the void!</p>
-                <p className="text-sm mt-1">I'll get back to you when I finish watching every cat video on the internet.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formState.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-portfolio-blue 
-                    focus:border-portfolio-blue outline-none transition-all"
-                    placeholder="Your name (I promise I'll remember it... maybe)"
-                  />
+            <div className="luxury-card h-full">
+              <h3 className="text-2xl font-light mb-8 text-foreground tracking-wide">Send a Message</h3>
+              
+              {formSubmitted ? (
+                <div className="bg-accent/10 text-accent p-6 rounded-lg border border-accent/20 text-center">
+                  <p className="font-light text-lg">Your message has been sent... to the void!</p>
+                  <p className="text-sm mt-2 font-light">I'll get back to you when I finish watching every cat video on the internet.</p>
                 </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-portfolio-blue 
-                    focus:border-portfolio-blue outline-none transition-all"
-                    placeholder="Your email (so I can spam you with newsletter signups)"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formState.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-portfolio-blue 
-                    focus:border-portfolio-blue outline-none transition-all"
-                    placeholder="Your message (which I'll definitely read right away and not after three months)"
-                  ></textarea>
-                </div>
-                
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-portfolio-darkBlue to-portfolio-blue text-white py-2 px-6 
-                  rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                >
-                  {isSubmitting ? 'Pretending to Send...' : 'Send Message (to the Abyss)'}
-                </Button>
-              </form>
-            )}
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-light text-muted-foreground mb-2 tracking-wide">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formState.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg 
+                      focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all
+                      font-light placeholder:text-muted-foreground/50"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-light text-muted-foreground mb-2 tracking-wide">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formState.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg 
+                      focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all
+                      font-light placeholder:text-muted-foreground/50"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-light text-muted-foreground mb-2 tracking-wide">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={5}
+                      value={formState.message}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg 
+                      focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all resize-none
+                      font-light placeholder:text-muted-foreground/50"
+                      placeholder="Your message..."
+                    ></textarea>
+                  </div>
+                  
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full futuristic-button flex items-center justify-center gap-3"
+                  >
+                    <Send size={18} />
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </div>

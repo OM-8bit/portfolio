@@ -64,11 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				portfolio: {
-					blue: 'hsl(262 83% 58%)',
-					darkBlue: 'hsl(258 90% 66%)',
-					text: 'hsl(0 0% 98%)',
-					light: 'hsl(240 10% 3.9%)',
-					accent: 'hsl(282 85% 60%)'
+					copper: 'hsl(25 65% 55%)',
+					bronze: 'hsl(35 55% 50%)',
+					earth: 'hsl(30 20% 25%)',
+					moss: 'hsl(140 25% 35%)',
+					sage: 'hsl(145 20% 45%)',
+					sand: 'hsl(40 30% 85%)',
+					terracotta: 'hsl(15 60% 50%)'
 				}
 			},
 			borderRadius: {
