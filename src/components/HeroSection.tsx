@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import TypingAnimation from './TypingAnimation';
-import { Download } from 'lucide-react';
+import { Download, ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,49 +39,53 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Modern gradient background */}
-      <div className="absolute w-full h-full bg-gradient-to-br from-primary/20 via-transparent to-portfolio-accent/20"></div>
-      <div className="absolute w-full h-full bg-[radial-gradient(circle_at_top_right,hsl(262_83%_58%_/_0.1),transparent_70%)]"></div>
-      <div className="absolute w-full h-full bg-[radial-gradient(circle_at_bottom_left,hsl(282_85%_60%_/_0.1),transparent_70%)]"></div>
+      {/* Futuristic gradient layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,hsl(25_65%_55%_/_0.08),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,hsl(145_25%_40%_/_0.08),transparent_50%)]"></div>
       
-      {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
-      <div className="absolute top-40 right-20 w-16 h-16 bg-portfolio-accent/10 rotate-45 animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-40 left-20 w-12 h-12 bg-primary/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+      {/* Floating geometric elements */}
+      <div className="absolute top-20 left-10 w-24 h-24 border border-primary/20 rounded-full animate-float"></div>
+      <div className="absolute top-32 right-16 w-20 h-20 border border-accent/20 rotate-45 animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-32 left-24 w-16 h-16 border border-primary/30 animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-48 right-32 w-12 h-12 bg-accent/5 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
       
       <div className="container mx-auto px-6 md:px-12 z-10 flex flex-col items-center justify-center text-center">
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-xl md:text-2xl text-foreground font-medium mb-3">Hello, I'm</h2>
+          <h2 className="text-xl md:text-2xl text-muted-foreground font-light tracking-[0.2em] mb-6 uppercase">
+            Hello, I'm
+          </h2>
         </div>
         
         <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 text-foreground tracking-tight">
             Om Barot
           </h1>
         </div>
         
         <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-foreground h-16 flex items-center justify-center">
+          <div className="text-2xl md:text-3xl lg:text-4xl font-light mb-8 text-foreground h-16 flex items-center justify-center">
             <TypingAnimation texts={typingTexts} speed={150} className="text-primary" />
           </div>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 font-light leading-relaxed">
             A passionate software developer specializing in Python and Java,
-            building scalable and high-performance applications.
+            building scalable and high-performance applications with a touch of luxury.
           </p>
         </div>
         
-        <div className={`transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'} flex flex-col sm:flex-row gap-4 justify-center`}>
+        <div className={`transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'} flex flex-col sm:flex-row gap-6 justify-center`}>
           <button 
             onClick={scrollToProjects}
-            className="modern-gradient text-white px-8 py-3 rounded-full 
-            shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-pulse-glow"
+            className="futuristic-button group"
           >
-            View My Work
+            <span className="relative z-10">View My Work</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </button>
           <button 
             onClick={downloadResume}
-            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground 
-            px-8 py-3 rounded-full transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 mx-auto sm:mx-0"
+            className="border-2 border-primary/50 text-primary hover:bg-primary/10 backdrop-blur-sm
+            px-8 py-3 rounded-full transition-all duration-500 hover:border-primary hover:shadow-[0_0_20px_rgba(var(--primary)_/_0.3)] 
+            flex items-center gap-3 mx-auto sm:mx-0 font-light tracking-wide"
           >
             <Download size={18} />
             Download Resume
@@ -90,9 +94,9 @@ const HeroSection = () => {
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-        <div className={`w-8 h-12 rounded-full border-2 border-primary flex justify-center p-1 
+        <div className={`w-10 h-16 rounded-full border-2 border-primary/40 flex justify-center items-start p-2
         transition-all duration-1000 delay-1500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="w-1 h-3 bg-primary rounded-full animate-[bounce_1.5s_infinite]"></div>
+          <ArrowDown className="w-4 h-4 text-primary animate-bounce" />
         </div>
       </div>
     </section>
